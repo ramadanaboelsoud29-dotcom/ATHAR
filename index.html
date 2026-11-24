@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أثر | أي مشكلة ليها حل</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
+body{background:#F3F7F5;color:#123B3A;text-align:center}
+header{background:#123B3A;color:#fff;padding:38px 15px 30px;text-align:center;border-bottom:5px solid #FFC94D}
+header h1{font-size:50px; margin:0px;} header h1 span{color:#FFC94D}
+header p{margin-top:10px;font-size:18px;font-weight:600;color:#E6F2F1}
+header .sub-head{font-size:14px;color:#FFC94D;margin-top:8px;font-weight:700;letter-spacing:1px}
+.container{max-width:950px;margin:auto;padding:15px;text-align:center}
+.card{background:#fff;border-radius:20px;padding:24px;margin:16px 0;box-shadow:0 6px 20px rgba(18,59,58,.07);border:1px solid #DCEDEA;text-align:center}
+  .title-line{
+  width:80px;
+  height:5px;
+  background:#FFC94D;
+  margin:0px auto 0 auto;
+  border-radius:999px;
+  }
+.card h2{color:#123B3A;font-size:28px} .card p.sub{color:#5A7A78;font-size:15px;margin-top:6px}
+.cat-title{margin:24px 0 12px;font-weight:900;font-size:20px;padding:9px 20px;border-radius:999px;display:inline-block;background:#E6F2F1;color:#123B3A;border:1px solid #C8E2DE}
+.problem-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+.problem-btns button{background:#fff;color:#123B3A;padding:11px 17px;border:1.5px solid #C8E2DE;border-radius:999px;font-size:14.5px;cursor:pointer;font-weight:700}
+.problem-btns button:hover{background:#1A7A6D;color:#fff;border-color:#1A7A6D}
+.problem-btns button.active{background:#123B3A;color:#FFC94D;border-color:#123B3A}
+#result{display:none;text-align:right;border:1px solid #1A7A6D}
+.badge{display:inline-block;padding:9px 20px;border-radius:999px;font-weight:900;margin-bottom:12px;font-size:14px}
+.mine{background:#D8F3DC;color:#1B4332} .official{background:#FFF3CD;color:#7A5A00} .both{background:#DCEDEA;color:#123B3A}
+ol{padding-right:20px;line-height:2} .steps-box{background:#F3F7F5;border-radius:12px;padding:10px 15px}
+.contact-box{background:#123B3A;color:#fff;padding:16px;border-radius:12px;margin-top:10px;line-height:1.8} .contact-box b{color:#FFC94D}
+.green-box{background:#EAF7F0;border:1.5px solid #1A7A6D;border-radius:16px;padding:20px;margin-top:16px;text-align:center;display:none}
+.green-box h3{color:#123B3A;font-size:21px} .green-box p{color:#334155;line-height:1.8;margin:8px 0}
+.green-btn{display:inline-block;background:#1A7A6D;color:#fff;padding:13px 26px;border-radius:999px;text-decoration:none;font-weight:900;margin-top:6px;font-size:17px}
+.idea-card{background:#123B3A;color:#fff;border:none;padding:28px}
+.idea-card h2{color:#fff;font-size:30px}
+.idea-card p{color:#DCEDEA;line-height:1.9;margin-top:10px;font-size:17px}
+.idea-card b{color:#FFC94D}
+.tag{display:inline-block;background:#FFC94D;color:#123B3A;padding:8px 18px;border-radius:999px;font-size:15px;font-weight:900;margin-top:8px}
+footer{text-align:center;padding:24px 15px;color:#fff;font-size:17px;font-weight:700;background:#123B3A;margin-top:10px;line-height:1.8;border-top:5px solid #FFC94D}
+footer span{color:#FFC94D;font-weight:900;font-size:23px}
+</style>
+</head>
+<body>
+<header>
+  <h1>أَثَر</h1>
+<div class="title-line"></div>
+  <p>اختار مشكلتك.. وهتروح لحلها على طول</p><p class="sub-head">مدرسة • شارع • بيت • سوشيال • صحة • مجتمع</p></header>
+<div class="container">
+<h2>اختار مشكلتك</h2><p class="sub">دوس على المشكلة وهتروح لحلها على طول من غير أي بيانات</p>
+
+<div class="cat-title">🏫 المدرسة</div>
+<div class="problem-btns">
+<button data-p="مدرس ضربني">مدرس ضربني</button>
+<button data-p="تنمر في المدرسة">تنمر في المدرسة</button>
+<button data-p="خناقة بين طلبة">خناقة بين طلبة</button>
+<button data-p="غش في الامتحان">غش في الامتحان</button>
+<button data-p="حمامات المدرسة مش نضيفة">حمامات مش نضيفة</button>
+<button data-p="مدرس بيشرح وحش">مدرس بيشرح وحش</button>
+<button data-p="تسريب امتحانات">تسريب امتحانات</button>
+<button data-p="مفيش أنشطة في المدرسة">مفيش أنشطة</button>
+<button data-p="فصل زحمة">فصل زحمة</button>
+<button data-p="مصروف ضاع / اتسرق">مصروف ضاع / اتسرق</button>
+</div>
+
+<div class="cat-title">🛣️ الشارع</div>
+<div class="problem-btns">
+<button data-p="زبالة في الشارع">زبالة في الشارع</button>
+<button data-p="عمود نور بايظ">عمود نور بايظ</button>
+<button data-p="طريق مكسر">طريق مكسر</button>
+<button data-p="كلاب ضالة">كلاب ضالة</button>
+<button data-p="تحرش في الشارع">تحرش في الشارع</button>
+<button data-p="سواقة متهورة">سواقة متهورة</button>
+<button data-p="خناقة في الشارع">خناقة في الشارع</button>
+<button data-p="مفيش مواصلات">مفيش مواصلات</button>
+<button data-p="باعه جائلين قافلين الطريق">باعه قافلين الطريق</button>
+<button data-p="تكسير ورمي في الشارع">تكسير ورمي في الشارع</button>
+</div>
+
+<div class="cat-title">📱 سوشيال وإنترنت</div>
+<div class="problem-btns">
+<button data-p="تنمر أونلاين">تنمر أونلاين</button>
+<button data-p="ابتزاز إلكتروني">ابتزاز إلكتروني</button>
+<button data-p="إدمان موبايل">إدمان موبايل</button>
+<button data-p="شائعات على السوشيال">شائعات على السوشيال</button>
+<button data-p="حسابي اتهكر">حسابي اتهكر</button>
+<button data-p="فيديوهات مش مناسبة">فيديوهات مش مناسبة</button>
+<button data-p="نصب أونلاين">نصب أونلاين</button>
+<button data-p="مقارنة بالناس على السوشيال">مقارنة بالناس</button>
+</div>
+
+<div class="cat-title">🏠 البيت والمجتمع</div>
+<div class="problem-btns">
+<button data-p="خناقة في البيت">خناقة في البيت</button>
+<button data-p="مياه مقطوعة">مياه مقطوعة</button>
+<button data-p="كهربا بتقطع">كهربا بتقطع</button>
+<button data-p="أكل بيترمي">أكل بيترمي</button>
+<button data-p="مفيش فلوس للدروس">مفيش فلوس للدروس</button>
+<button data-p="حد في البيت بيدخن">حد في البيت بيدخن</button>
+<button data-p="ضغط أهلي في المذاكرة">ضغط أهلي في المذاكرة</button>
+<button data-p="جار مزعج">جار مزعج</button>
+<button data-p="عنف أسري">عنف أسري</button>
+</div>
+
+<div class="cat-title">💚 صحة وبيئة</div>
+<div class="problem-btns">
+<button data-p="شجر قليل / حر">شجر قليل / حر</button>
+<button data-p="تدخين جنب الأطفال">تدخين جنب الأطفال</button>
+<button data-p="صرف طافح">صرف طافح</button>
+<button data-p="حد تعبان ومش لاقي علاج">حد تعبان ومش لاقي علاج</button>
+<button data-p="مخدرات في المنطقة">مخدرات في المنطقة</button>
+<button data-p="أكل منتهي الصلاحية">أكل منتهي الصلاحية</button>
+<button data-p="مفيش مكان نلعب فيه">مفيش مكان نلعب فيه</button>
+<button data-p="تلوث ودخان">تلوث ودخان</button>
+</div>
+
+<div class="card" id="result">
+<span class="badge" id="badge"></span><h2 id="rTitle"></h2>
+<p id="rDesc" style="color:#475569;margin-top:8px;line-height:1.8"></p>
+<h3 style="margin-top:18px;color:#123B3A">الحل بالخطوات:</h3>
+<div class="steps-box"><ol id="rSteps"></ol></div>
+<h3 style="margin-top:18px;color:#123B3A">تبلغ فين / تعمل إيه؟</h3>
+<div class="contact-box" id="rContact"></div>
+<div class="green-box" id="greenBox">
+  <h3>🌿 الجيل الأخضر - الذراع التنفيذي لمبادرة أثر</h3>
+  <p id="greenText"></p>
+  <a class="green-btn" href="https://chat.whatsapp.com/Bwpzdwqrj90AOT85Fvim16" target="_blank">انضم للجيل الأخضر →</a>
+</div>
+<p id="safeNote" style="margin-top:12px;background:#FFF8E7;padding:12px;border-radius:10px;color:#7A5A00;font-size:14px;line-height:1.7;display:none"></p>
+</div>
+
+<div class="card idea-card"><h2>فكرة أثر</h2><p>أثر بيقولك المشكلة دي <b>في إيدك</b> ولا <b>في إيد المسؤولين</b> ولا <b>في إيدكم انتوا الاتنين</b>، وبيديلك الحل على طول.</p><p><span class="tag">الجيل الأخضر</span><br>هو الذراع التنفيذي لمبادرة أثر</p></div>
+</div>
+<footer>مشروع أثر | فكرة وتنفيذ الطالب:<br><span>رمضان شريف أبو السعود</span></footer>
+
+<script>
+const DB = {
+"مدرس ضربني":{type:"official",label:"في إيد المسؤولين - حساس",desc:"الضرب ممنوع قانونا، وحقك تتكلم.",steps:["متردش الضرب بضرب، ابعد","احكي لولي أمرك في نفس اليوم","ولي أمرك يقابل المدير رسمي","لو محلش، شكوى في الإدارة التعليمية"],contact:"<b>تبلغ فين؟</b><br>• مدير المدرسة • الإدارة التعليمية • 16528",safe:"⚠️ لو اتضربت جامد روح مستشفى فورا.",green:false},
+"تنمر في المدرسة":{type:"both",label:"في إيدك + المسؤولين",desc:"التنمر مش هزار.",steps:["متردش بشتيمة","وثق اللي حصل","احكي لحد كبير بتثق فيه","اطلب تدخل الأخصائي"],contact:"<b>تبلغ فين؟</b> الأخصائي • المدير • نجدة الطفل 16000",green:false},
+"خناقة بين طلبة":{type:"both",label:"في إيدك + المسؤولين",desc:"أهم حاجة محدش يتعور.",steps:["متدخلش في النص لو ضرب جامد","نادي مدرس بسرعة","احكي للمشرف اللي شوفته","لو حد اتعور اطلب إسعاف"],contact:"<b>تبلغ فين؟</b> مشرف الدور • إسعاف 123",green:false},
+"غش في الامتحان":{type:"mine",label:"في إيدك انت",desc:"الغش بيضرك انت.",steps:["ذاكر بفهم","اعمل جدول صغير","اسأل لما متكونش فاهم","ركز في ورقتك"],contact:"<b>نصيحة:</b> بلغ المراقب من غير أسماء لو غش جماعي.",green:false},
+"حمامات المدرسة مش نضيفة":{type:"both",label:"في إيدك + المسؤولين",desc:"النظافة مسؤولية مشتركة.",steps:["حافظ على مكانك","كلم اتحاد الطلبة لحملة نظافة","اطلب صابون ومناديل","وثق وبلغ المدير"],contact:"<b>تبلغ فين؟</b> مدير المدرسة • اتحاد الطلبة",green:true,greenText:"المشكلة دي الجيل الأخضر بينفذها: حملة نظافة للمدرسة. انضم وهننزل ننضف مع بعض."},
+"مدرس بيشرح وحش":{type:"both",label:"في إيدك + المسؤولين",desc:"ممكن تحلها بطرق تانية.",steps:["ذاكر من كتاب أو فيديو","اسأله بعد الحصة بأدب","كون مجموعة مذاكرة","اطلب من اتحاد الطلبة يكلم الإدارة"],contact:"<b>تبلغ فين؟</b> مدير المدرسة",green:false},
+"تسريب امتحانات":{type:"official",label:"في إيد المسؤولين",desc:"التسريب بيضيع حق المجتهد.",steps:["مترحش للتسريب","ذاكر واعتمد على نفسك","بلغ المدرسة لو عرفت المصدر"],contact:"<b>تبلغ فين؟</b> إدارة المدرسة",green:false},
+"مفيش أنشطة في المدرسة":{type:"mine",label:"في إيدك انت",desc:"الأنشطة بتبدأ بفكرة.",steps:["اقترح نشاط على اتحاد الطلبة","جمع توقيعات صحابك","اعرض خطة بسيطة على المدير","ابدأ بنشاط صغير"],contact:"<b>نفذ مع:</b> الجيل الأخضر",green:true,greenText:"الجيل الأخضر بيعمل أنشطة في المدارس. انضم واقترح النشاط اللي نفسك فيه."},
+"فصل زحمة":{type:"both",label:"في إيدك + المسؤولين",desc:"مشكلة تنظيم.",steps:["رتبوا القعدة","اطلبوا تقسيم الفصل","ذاكروا في مجموعات"],contact:"<b>تبلغ فين؟</b> مدير المدرسة",green:false},
+"مصروف ضاع / اتسرق":{type:"both",label:"في إيدك + المسؤولين",desc:"متتهمش حد من غير دليل.",steps:["دور كويس واسأل صحابك","بلغ المشرف فورا","متتهمش حد من غير دليل","قسم مصروفك بعد كده"],contact:"<b>تبلغ فين؟</b> مشرف الدور",green:false},
+"زبالة في الشارع":{type:"both",label:"في إيدك + المسؤولين",desc:"انت تبدأ والمسؤول يكمل.",steps:["نضف قدام بيتك","افصل الزبالة","اعملوا يوم نظافة","بلغ الحي لو الصناديق مليانة"],contact:"<b>تبلغ فين؟</b> الحي • 16528",green:true,greenText:"دي شغلتنا الأساسية في الجيل الأخضر: يوم نظافة في الشارع. انضم وهننزل ننضف مع بعض."},
+"عمود نور بايظ":{type:"official",label:"في إيد المسؤولين",desc:"محتاج فني.",steps:["صور العمود","متلمسش السلك","بلغ الحي أو الكهرباء"],contact:"<b>تبلغ فين؟</b> طوارئ الكهرباء 121",green:false},
+"طريق مكسر":{type:"official",label:"في إيد المسؤولين",desc:"محتاج معدات.",steps:["صور الحفرة","حط علامة تحذير","بلغ الحي"],contact:"<b>تبلغ فين؟</b> الحي • 16528",green:false},
+"كلاب ضالة":{type:"official",label:"في إيد المسؤولين",desc:"متقربش منهم.",steps:["متجريش قدامهم","متضربهمش","بلغ الحي أو الطب البيطري"],contact:"<b>تبلغ فين؟</b> الحي • الطب البيطري",green:false},
+"تحرش في الشارع":{type:"official",label:"في إيد المسؤولين - حساس",desc:"حقك محفوظ بالقانون.",steps:["ابعد لمكان آمن","احكي لحد كبير بتثق فيه","احفظ وصف الشخص","بلغ الشرطة"],contact:"<b>تبلغ فين؟</b> الشرطة 122 • نجدة الطفل 16000",safe:"⚠️ احكي فورا لولي أمرك.",green:false},
+"سواقة متهورة":{type:"official",label:"في إيد المسؤولين",desc:"خطر على الكل.",steps:["متحاولش توقفه","احفظ رقم العربية","بلغ الشرطة"],contact:"<b>تبلغ فين؟</b> النجدة 122",green:false},
+"خناقة في الشارع":{type:"both",label:"في إيدك + المسؤولين",desc:"متدخلش لوحدك.",steps:["متدخلش لوحدك","نادي حد كبير","بلغ الشرطة لو فيه إصابة"],contact:"<b>تبلغ فين؟</b> النجدة 122",green:false},
+"مفيش مواصلات":{type:"official",label:"في إيد المسؤولين",desc:"مشكلة تنظيم.",steps:["جمعوا توقيعات","بلغوا الحي","نسقوا مع بعض"],contact:"<b>تبلغ فين؟</b> الحي",green:false},
+"باعه جائلين قافلين الطريق":{type:"both",label:"في إيدك + المسؤولين",desc:"اتكلم بأدب الأول.",steps:["اتكلم بأدب","اطلب يوسعوا الطريق","لو قفلوا خالص بلغ الحي"],contact:"<b>تبلغ فين؟</b> الحي",green:false},
+"تكسير ورمي في الشارع":{type:"mine",label:"في إيدك انت",desc:"انت قدوة.",steps:["متشاركش في التكسير","وعي صحابك","بلغ الحي لو تكسير متعمد","شارك في حملة تنظيف"],contact:"<b>تبلغ فين؟</b> الحي",green:true,greenText:"الجيل الأخضر بيعمل حملات توعية ونظافة ضد التكسير. انضم معانا."},
+"تنمر أونلاين":{type:"both",label:"في إيدك + المسؤولين",desc:"متردش على التنمر.",steps:["متردش","خد سكرين شوت","اعمل بلوك وريبورت","احكي لحد كبير"],contact:"<b>تبلغ فين؟</b> مباحث الإنترنت • 16000",green:false},
+"ابتزاز إلكتروني":{type:"official",label:"في إيد المسؤولين - حساس",desc:"جريمة يعاقب عليها القانون.",steps:["متدفعش فلوس","متحذفش الرسايل","احكي لولي أمرك","بلغ مباحث الإنترنت"],contact:"<b>تبلغ فين؟</b> مباحث الإنترنت 108",safe:"⚠️ متحذفش أي دليل.",green:false},
+"إدمان موبايل":{type:"mine",label:"في إيدك انت",desc:"بياكل وقتك.",steps:["حدد وقت","شيل إشعارات","اعمل بديل: رياضة","نام من غير موبايل"],contact:"<b>تحدي:</b> جرب يوم من غير سوشيال.",green:false},
+"شائعات على السوشيال":{type:"mine",label:"في إيدك انت",desc:"الشائعة بتأذي.",steps:["متشيرش قبل ما تتأكد","اسأل عن المصدر","متشاركش إشاعة عن حد"],contact:"<b>نصيحة:</b> دور على الخبر في مصدر موثوق.",green:false},
+"حسابي اتهكر":{type:"both",label:"في إيدك + المسؤولين",desc:"غير الباسورد فورا.",steps:["غير الباسورد","فعل التحقق بخطوتين","بلغ صحابك","بلغ مباحث الإنترنت"],contact:"<b>تبلغ فين؟</b> مباحث الإنترنت 108",green:false},
+"فيديوهات مش مناسبة":{type:"mine",label:"في إيدك انت",desc:"متشيرهاش.",steps:["اقفل الفيديو","اعمل ريبورت","متشيرهاش"],contact:"<b>نصيحة:</b> اعمل Not Interested.",green:false},
+"نصب أونلاين":{type:"official",label:"في إيد المسؤولين",desc:"متدفعش لحد متعرفوش.",steps:["متدفعش فلوس","متدخلش لينكات مشبوهة","احفظ الشات","بلغ مباحث الإنترنت"],contact:"<b>تبلغ فين؟</b> مباحث الإنترنت 108",green:false},
+"مقارنة بالناس على السوشيال":{type:"mine",label:"في إيدك انت",desc:"السوشيال مش حقيقة.",steps:["افتكر السوشيال مش حقيقة كاملة","بطل تتابع حسابات بتتعبك","ركز على تقدمك"],contact:"<b>نصيحة:</b> قارن نفسك بنفسك امبارح.",green:false},
+"خناقة في البيت":{type:"mine",label:"في إيدك انت",desc:"بتحصل في كل البيوت.",steps:["متعليش صوتك","سيب المكان واهدى","اتكلم لما تهدى"],contact:"<b>نصيحة:</b> لو فيها خطر كلم حد كبير.",green:false},
+"مياه مقطوعة":{type:"official",label:"في إيد المسؤولين",desc:"مشكلة شبكة.",steps:["اتأكد مش عندك بس","اسأل جيرانك","بلغ شركة المياه"],contact:"<b>تبلغ فين؟</b> شركة المياه 125",green:false},
+"كهربا بتقطع":{type:"official",label:"في إيد المسؤولين",desc:"محتاجة شركة الكهرباء.",steps:["افصل الأجهزة","بلغ الأعطال"],contact:"<b>تبلغ فين؟</b> طوارئ الكهرباء 121",green:false},
+"أكل بيترمي":{type:"mine",label:"في إيدك انت",desc:"الأكل الزيادة ممكن ينقذ حد.",steps:["اعمل صندوق خشب بباب","حط الأكل النضيف","قول لجيرانك","تابعه ونضفه"],contact:"<b>نفذ مع:</b> الجيل الأخضر",green:true,greenText:"دي شغلتنا في الجيل الأخضر: صندوق الأكل. انضم وهنعمل صندوق في شارعك."},
+"مفيش فلوس للدروس":{type:"mine",label:"في إيدك انت",desc:"ممكن تذاكر ببلاش.",steps:["ذاكر من كتب المدرسة واليوتيوب","كون مجموعة مذاكرة","اسأل مدرسك"],contact:"<b>نصيحة:</b> الشاطر اللي بيفهم أكتر.",green:false},
+"حد في البيت بيدخن":{type:"both",label:"في إيدك + المسؤولين",desc:"التدخين السلبي خطر.",steps:["اتكلم بهدوء","اطلب يدخن بعيد عن الأطفال","هوي البيت"],contact:"<b>نصيحة:</b> اتكلم بهدوء مش بخناق.",green:false},
+"ضغط أهلي في المذاكرة":{type:"both",label:"في إيدك + المسؤولين",desc:"الضغط مش بيخليك تذاكر أحسن.",steps:["اتكلم بهدوء","وضح إن الضغط بيتعبك","اعمل جدول ووريهم التزامك"],contact:"<b>نصيحة:</b> اتكلم بهدوء.",green:false},
+"جار مزعج":{type:"both",label:"في إيدك + المسؤولين",desc:"اتكلم بأدب الأول.",steps:["اتكلم بأدب","لو بالليل بلغ اتحاد الملاك","متردش الإزعاج بإزعاج"],contact:"<b>تبلغ فين؟</b> اتحاد الملاك",green:false},
+"عنف أسري":{type:"official",label:"في إيد المسؤولين - حساس",desc:"مش ذنبك أبدا.",steps:["متدخلش في الضرب","روح لمكان آمن","احكي لحد كبير بتثق فيه","بلغ نجدة الطفل"],contact:"<b>تبلغ فين؟</b> نجدة الطفل 16000 • الشرطة 122",safe:"⚠️ لو في خطر دلوقتي روح لمكان آمن.",green:false},
+"شجر قليل / حر":{type:"mine",label:"في إيدك انت",desc:"انت تقدر تحلها.",steps:["ازرع شجرة قدام بيتك","اسقيها كل يوم","اعمل حملة تشجير"],contact:"<b>نفذ مع:</b> الجيل الأخضر",green:true,greenText:"دي شغلتنا الأساسية: حملة تشجير. انضم للجيل الأخضر وهنزرع مع بعض يوم الجمعة."},
+"تدخين جنب الأطفال":{type:"both",label:"في إيدك + المسؤولين",desc:"التدخين السلبي أخطر على الأطفال.",steps:["اطلب بأدب يبعد","وضح الخطر","لو مكان عام بلغ الإدارة"],contact:"<b>تبلغ فين؟</b> إدارة المكان",green:false},
+"صرف طافح":{type:"official",label:"في إيد المسؤولين",desc:"خطر صحي.",steps:["متلمسش المياه","حذر الأطفال","صور وبلغ الصرف"],contact:"<b>تبلغ فين؟</b> شركة الصرف 175",green:false},
+"حد تعبان ومش لاقي علاج":{type:"both",label:"في إيدك + المسؤولين",desc:"ممكن تنقذ حد.",steps:["اطلب إسعاف لو خطيرة","روح وحدة صحية","اسأل عن التأمين الصحي"],contact:"<b>تبلغ فين؟</b> إسعاف 123",green:false},
+"مخدرات في المنطقة":{type:"official",label:"في إيد المسؤولين - حساس",desc:"خطر جدا.",steps:["متقربش منهم","متجربش أبدا","احكي لولي أمرك","بلغ الشرطة"],contact:"<b>تبلغ فين؟</b> مكافحة المخدرات 16023",safe:"⚠️ متجربش أبدا.",green:false},
+"أكل منتهي الصلاحية":{type:"official",label:"في إيد المسؤولين",desc:"متاكلوش.",steps:["متاكلوش","صور المنتج والتاريخ","بلغ حماية المستهلك"],contact:"<b>تبلغ فين؟</b> حماية المستهلك 19588",green:false},
+"مفيش مكان نلعب فيه":{type:"both",label:"في إيدك + المسؤولين",desc:"ممكن تعملوه بنفسكم.",steps:["جمعوا توقيعات","اقترحوا مكان على الحي","نضفوا مكان فاضي واعملوه ملعب"],contact:"<b>تبلغ فين؟</b> الحي • مركز الشباب",green:true,greenText:"الجيل الأخضر بينضف مكان فاضي ويعمله ملعب. انضم وهنعمل ملعب في منطقتك."},
+"تلوث ودخان":{type:"both",label:"في إيدك + المسؤولين",desc:"صور المصدر.",steps:["البس كمامة","صور المصدر","بلغ البيئة والحي","ازرع شجر"],contact:"<b>تبلغ فين؟</b> وزارة البيئة • 16528",green:true,greenText:"الجيل الأخضر بيزرع شجر عشان يقلل التلوث. انضم معانا."}
+};
+function showProblem(val, btn){
+  val = (val||"").trim();
+  document.querySelectorAll('.problem-btns button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  let d = DB[val] || {type:"both",label:"في إيدك + في إيد المسؤولين",desc:"أي مشكلة ليها جزء عليك وجزء على المسؤول.",steps:["حدد المشكلة بالظبط","ابدأ باللي تقدر عليه","صور وبلغ المسؤول","تابع لحد ما تتحل"],contact:"<b>تبلغ فين؟</b> شكاوى مجلس الوزراء 16528",green:false};
+  document.getElementById('result').style.display="block";
+  let badge=document.getElementById('badge');badge.textContent=d.label;badge.className="badge "+(d.type==="mine"?"mine":d.type==="official"?"official":"both");
+  document.getElementById('rTitle').textContent="مشكلتك: "+val;
+  document.getElementById('rDesc').textContent=d.desc;
+  document.getElementById('rSteps').innerHTML=d.steps.map(s=>"<li>"+s+"</li>").join("");
+  document.getElementById('rContact').innerHTML=d.contact;
+  let gBox=document.getElementById('greenBox');
+  if(d.green){gBox.style.display="block";document.getElementById('greenText').textContent=d.greenText||"المشكلة دي الجيل الأخضر بينفذ حلها في الشارع.";}else{gBox.style.display="none";}
+  let safeEl=document.getElementById('safeNote');if(d.safe){safeEl.style.display="block";safeEl.textContent=d.safe;}else{safeEl.style.display="none";}
+  document.getElementById('result').scrollIntoView({behavior:"smooth"});
+}
+
+document.querySelectorAll('.problem-btns button').forEach(function(btn){
+  btn.addEventListener('click', function(){ showProblem(btn.getAttribute('data-p'), btn); });
+});
+</script>
+</body>
+ </html>
